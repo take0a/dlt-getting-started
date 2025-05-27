@@ -12,6 +12,24 @@ from dlt.sources.sql_database import sql_database, sql_table, Table
 from sqlalchemy.sql.sqltypes import TypeEngine
 import sqlalchemy as sa
 
+def load_tables_family_and_genome():
+
+    # Create a dlt source that will load tables "family" and "genome"
+    source = sql_database().with_resources("family", "genome")
+
+    # Create a dlt pipeline object
+    pipeline = dlt.pipeline(
+        pipeline_name="sql_to_duckdb_pipeline", # Custom name for the pipeline
+        destination="duckdb", # dlt destination to which the data will be loaded
+        dataset_name="sql_to_duckdb_pipeline_data" # Custom name for the dataset created in the destination
+    )
+
+    # Run the pipeline
+    load_info = pipeline.run(source)
+
+    # Pretty print load information
+    print(load_info)
+
 
 def load_select_tables_from_database() -> None:
     """Use the sql_database source to reflect an entire database schema and load select tables from it.
@@ -346,6 +364,7 @@ def specify_columns_to_load() -> None:
 
 
 if __name__ == "__main__":
+    load_tables_family_and_genome()
     # Load selected tables with different settings
     # load_select_tables_from_database()
 
@@ -356,7 +375,7 @@ if __name__ == "__main__":
     # select_with_end_value_and_row_order()
 
     # Load tables with the standalone table resource
-    load_standalone_table_resource()
+    # load_standalone_table_resource()
 
     # Load all tables from the database.
     # Warning: The sample database is very large
