@@ -149,5 +149,5 @@ def load_pokemon() -> None:
 
 
 if __name__ == "__main__":
-    load_github()
+    # load_github()
     load_pokemon()
