@@ -6,6 +6,7 @@ requires-python = ">=3.12"
 members = [
     "dlt-getting-started",
     "rest-api",
+    "sql-database",
 ]
 
 [[package]]
@@ -941,6 +942,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/44/cd/a040c4b3119bbe532
 wheels = [
     { url = "https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl", hash = "sha256:b30115f0def7d7531d22a0fb6502488d879e75b260a9db4d0819cfb25403af5e", size = 24303 },
 ]
+
+[[package]]
+name = "sql-database"
+version = "0.1.0"
+source = { virtual = "sql-database" }
 
 [[package]]
 name = "sqlglot"
