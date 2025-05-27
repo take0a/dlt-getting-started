@@ -10,4 +10,4 @@ dependencies = [
 ]
 
 [tool.uv.workspace]
-members = ["rest-api"]
+members = ["rest-api", "sql-database"]
