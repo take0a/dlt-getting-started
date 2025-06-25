@@ -5,5 +5,5 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "dlt[duckdb,filesystem]>=1.11.0",
+    "dlt[duckdb,filesystem,gs]>=1.11.0",
 ]
