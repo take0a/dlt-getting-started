@@ -1,2 +1,2 @@
-[sources.filesystem]
+[sources.readers.filesystem]
 bucket_url="gs://filesystem-tutorial"
