@@ -1,4 +1,3 @@
-# flake8: noqa
 import dlt
 from dlt.sources.sql_database import sql_database
 

@@ -30,4 +30,3 @@ pipeline = dlt.pipeline(
 
 load_info = pipeline.run(pokemon_source)
 print(load_info)
-
