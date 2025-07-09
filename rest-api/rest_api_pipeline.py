@@ -28,5 +28,8 @@ pipeline = dlt.pipeline(
     dataset_name="rest_api_data",
 )
 
-load_info = pipeline.run(pokemon_source)
+# load_info = pipeline.run(pokemon_source)
+pipeline.extract(pokemon_source)
+pipeline.normalize()
+load_info = pipeline.load()
 print(load_info)
